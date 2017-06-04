@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -44,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             incorrectAnswersList.add("Question 3");
         }
+        if( checkQuestion4() ){
+            numberOfQuestionsCorrect++;
+        } else {
+            incorrectAnswersList.add("Question 4");
+        }
+
 
         StringBuilder sb = new StringBuilder();
         for (String s : incorrectAnswersList)
@@ -53,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Context context = getApplicationContext();
-        CharSequence text = "You got " + numberOfQuestionsCorrect + "/3 answers right.\n\nRecheck the following:\n" + sb.toString();
+        CharSequence text = "You got " + numberOfQuestionsCorrect + "/4 answers right.\n\nRecheck the following:\n" + sb.toString();
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
@@ -84,5 +91,16 @@ public class MainActivity extends AppCompatActivity {
         EditText et = (EditText)findViewById(R.id.question_3_edit_text);
 
         return et.getText().toString().equalsIgnoreCase(Q3_ANSWER);
+    }
+    private boolean checkQuestion4() {
+        CheckBox c1 = (CheckBox) findViewById(R.id.question_4_first_checkbox);
+        CheckBox c2 = (CheckBox) findViewById(R.id.question_4_second_checkbox);
+        CheckBox c3 = (CheckBox) findViewById(R.id.question_4_third_checkbox);
+
+        if (c1.isChecked() && c2.isChecked() && !c3.isChecked()) {
+            return true;
+        }
+
+        return false;
     }
 }
