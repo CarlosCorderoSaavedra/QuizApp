@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quizapp.MainActivity"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/question_1_container"
+            style="@style/question_container_style">
+
+            <TextView
+                style="@style/question_style"
+                android:text="@string/question_1"/>
+
+            <RadioGroup
+                android:id="@+id/question_1_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/question_1_first_logo_radio"
+                    android:text=""
+                    style="@style/question_radio_button_style"
+                    />
+
+                <RadioButton
+                    android:id="@+id/question_1_second_logo_radio"
+                    android:text=""
+                    style="@style/question_radio_button_style"
+                    />
+
+                <RadioButton
+                    android:id="@+id/question_1_third_logo_radio"
+                    android:text=""
+                    style="@style/question_radio_button_style"
+                    />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    style="@style/radio_group_linear_layout_style">
+
+                    <ImageView
+                        android:id="@+id/question_1_first_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:src="@drawable/blackberry_logo"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/radio_group_linear_layout_style">
+
+                    <ImageView
+                        android:id="@+id/question_1_second_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:src="@drawable/toyota_logo"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/radio_group_linear_layout_style">
+
+                    <ImageView
+                        android:id="@+id/question_1_third_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:src="@drawable/lulu_logo"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/question_2_container"
+            style="@style/question_container_style">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/question_style"
+                android:text="@string/question_2" />
+
+            <RadioGroup
+                android:id="@+id/question_2_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/question_2_first_logo_radio"
+                    android:text=""
+                    style="@style/question_radio_button_style"
+                    />
+
+                <RadioButton
+                    android:id="@+id/question_2_second_logo_radio"
+                    android:text=""
+                    style="@style/question_radio_button_style"
+                    />
+
+                <RadioButton
+                    android:id="@+id/question_2_third_logo_radio"
+                    android:text=""
+                    style="@style/question_radio_button_style"
+                    />
+
+            </RadioGroup>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        style="@style/radio_group_linear_layout_style">
+
+                        <ImageView
+                            android:id="@+id/question_2_first_logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/starbucks_logo_1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/radio_group_linear_layout_style">
+
+                        <ImageView
+                            android:id="@+id/question_2_second_logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/starbucks_logo_2"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/radio_group_linear_layout_style">
+
+                        <ImageView
+                            android:id="@+id/question_2_third_logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/starbucks_logo_3"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/question_3_container"
+            style="@style/question_container_style">
+            <TextView
+                style="@style/question_style"
+                android:text="@string/question_3"/>
+
+            <ImageView
+                android:id="@+id/question_3_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nike_logo"/>
+
+            <EditText
+                android:id="@+id/question_3_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:onClick="checkQuiz"/>
+    </LinearLayout>
+</ScrollView>
